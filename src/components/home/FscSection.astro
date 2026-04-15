@@ -1,0 +1,39 @@
+---
+import { company } from "../../data/company";
+import SectionHeading from "../ui/SectionHeading.astro";
+import Button from "../ui/Button.astro";
+---
+
+<section class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Image -->
+      <div class="relative">
+        <img
+          src="/images/projects/rdj-2.jpg"
+          alt="Sustentabilidade na Arali Móveis"
+          class="w-full rounded-lg shadow-lg"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Content -->
+      <div>
+        <SectionHeading>
+          Promovendo Sustentabilidade nas Florestas
+        </SectionHeading>
+        <p class="text-brown-light leading-relaxed mb-6">
+          {company.fsc.description}
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <Button href={company.fsc.link} variant="outline">
+            Saiba mais sobre o FSC
+          </Button>
+          <Button href="/nosso-dia-a-dia/" variant="primary">
+            Nosso Dia a Dia
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

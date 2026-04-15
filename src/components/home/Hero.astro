@@ -1,0 +1,40 @@
+---
+import Button from "../ui/Button.astro";
+---
+
+<section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/projects/rdj-1.jpg"
+      alt="Projeto arquitetônico Arali Móveis"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-brown/60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-2xl">
+      <img
+        src="/favicon.svg"
+        alt=""
+        class="h-16 lg:h-20 w-auto mb-6 brightness-0 invert opacity-90"
+        aria-hidden="true"
+      />
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-medium text-cream leading-tight mb-4">
+        Engenharia<br />Aplica à Madeira
+      </h1>
+      <p class="text-cream/70 text-lg lg:text-xl mb-8 max-w-lg leading-relaxed">
+        Soluções de alto padrão em marcenaria para projetos nacionais e internacionais.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <Button href="/projetos/" variant="primary">Nossos Projetos</Button>
+        <Button href="/contato/" variant="outline" class="border-cream/50 text-cream hover:bg-cream hover:text-brown">
+          Fale Conosco
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>

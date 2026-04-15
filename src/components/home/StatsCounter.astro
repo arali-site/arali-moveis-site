@@ -1,0 +1,59 @@
+---
+import { company } from "../../data/company";
+
+const stats = [
+  { value: company.stats.years, suffix: "+", label: "Anos de Mercado" },
+  { value: company.stats.employees, suffix: "+", label: "Colaboradores" },
+  { value: company.stats.projects, suffix: "+", label: "Projetos Entregues" },
+];
+---
+
+<section class="py-16 lg:py-24 bg-burgundy">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+      {stats.map((stat) => (
+        <div class="stat-item">
+          <p class="text-4xl sm:text-5xl lg:text-6xl font-heading font-semibold text-cream mb-2">
+            <span class="stat-number" data-target={stat.value}>0</span>{stat.suffix}
+          </p>
+          <p class="text-cream/70 text-sm tracking-widest uppercase font-heading">
+            {stat.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const counters = entry.target.querySelectorAll(".stat-number");
+        counters.forEach((counter) => {
+          const target = parseInt(counter.getAttribute("data-target") || "0");
+          const duration = 2000;
+          const start = performance.now();
+
+          function update(now: number) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counter.textContent = Math.floor(eased * target).toString();
+            if (progress < 1) requestAnimationFrame(update);
+          }
+
+          requestAnimationFrame(update);
+        });
+
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  const section = document.querySelector(".stat-item")?.closest("section");
+  if (section) observer.observe(section);
+</script>

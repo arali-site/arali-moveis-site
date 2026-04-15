@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHeading from "../../components/ui/SectionHeading.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)
+);
+---
+
+<BaseLayout title="Projetos — Arali Móveis" description="Conheça os projetos da Arali Móveis. Soluções de alto padrão em marcenaria para projetos residenciais e comerciais.">
+  <!-- Page Header -->
+  <section class="py-12 lg:py-20 bg-burgundy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading dark>Nossos Projetos</SectionHeading>
+      <p class="text-cream/70 max-w-2xl text-lg leading-relaxed">
+        Cada projeto é único. Conheça alguns dos trabalhos que traduzem nossa paixão pela excelência em marcenaria.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+        {projects.map((project) => (
+          <div class="group relative overflow-hidden rounded-lg aspect-[4/3]">
+            <img
+              src={project.data.image}
+              alt={project.data.title}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brown/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="text-cream font-heading text-lg font-medium">{project.data.title}</h3>
+                {project.data.description && (
+                  <p class="text-cream/70 text-sm mt-1">{project.data.description}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

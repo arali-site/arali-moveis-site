@@ -20,17 +20,20 @@ import Button from "../ui/Button.astro";
       <!-- Content -->
       <div>
         <SectionHeading>
-          Promovendo Sustentabilidade nas Florestas
+          MANEJO FLORESTAL CERTIFICADO
         </SectionHeading>
         <p class="text-brown-light leading-relaxed mb-6">
-          {company.fsc.description}
+          {company.fsc.description_1}
+        </p>
+        <p class="text-brown-light leading-relaxed mb-6">
+          {company.fsc.description_2}
         </p>
         <div class="flex flex-wrap gap-4">
           <Button href={company.fsc.link} variant="outline">
             Saiba mais sobre o FSC
           </Button>
           <Button href="/nosso-dia-a-dia/" variant="primary">
-            Nosso Dia a Dia
+            NOSSA OPERAÇÃO
           </Button>
         </div>
       </div>

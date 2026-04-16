@@ -4,7 +4,7 @@ export const company = {
   url: "https://www.aralimoveis.com.br",
 
   stats: {
-    years: 12,
+    years: 15,
     employees: 200,
     projects: 500,
     area: 10000,
@@ -26,8 +26,10 @@ export const company = {
     "Humildade, Ética, Trabalho em Equipe, Excelência em Atendimento, Qualidade e Inovação.",
 
   fsc: {
-    description:
-      "O selo FSC® (Forest Stewardship Council®) é um certificado global de manejo florestal responsável e sustentável. Ele assegura que os produtos florestais, como madeira, papel e outros derivados, são provenientes de florestas manejadas de forma ambientalmente adequada, socialmente benéfica e economicamente viável. A certificação FSC contribui para a proteção das florestas e uma economia mais sustentável.",
+    description_1:
+      "O selo FSC® (Forest Stewardship Council®) certifica a origem de produtos florestais provenientes de manejo responsável. Garante que a madeira e seus derivados são obtidos a partir de processos ambientalmente adequados, socialmente responsáveis e economicamente viáveis.",
+    description_2:
+      "A certificação assegura rastreabilidade da cadeia produtiva e contribui para a preservação dos recursos florestais.",
     link: "https://br.fsc.org/br-pt",
   },
 

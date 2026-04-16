@@ -16,14 +16,25 @@ export const company = {
   ],
 
   history:
-    "Fundada em 2011 em São José do Rio Preto, interior de São Paulo, por Jeferson (Cuca) e Fabio Arali, a Arali Móveis começou em um pequeno galpão de 300 m² com apenas 8 colaboradores. Hoje, conta com mais de 200 colaboradores em uma fábrica moderna de aproximadamente 10.000 m², mantendo os valores de humildade e qualidade com atendimento humanizado.",
+    "Fundada em 2011, em São José do Rio Preto — SP, por Jeferson (Cuca) e Fábio Arali, a Arali iniciou suas operações em um galpão de 300 m², com uma equipe de 8 colaboradores. Hoje, a operação é conduzida por uma estrutura técnica integrada, com liderança direta dos fundadores e atuação conjunta das áreas de engenharia, projetos e produção. Atualmente, opera em uma estrutura industrial de aproximadamente 10.000 m², com mais de 200 colaboradores, mantendo o foco em execução, precisão e controle de qualidade em todas as etapas.",
+
+  structure:
+    "A Arali atua em projetos em todo o território nacional e internacional, com uma operação estruturada por tecnologia aplicada aos processos de fabricação. Conta com equipe técnica multidisciplinar, incluindo arquitetos, engenheiros e profissionais especializados em detalhamento e gerenciamento, garantindo consistência e controle ao longo de toda a execução.",
+
+  team:
+    "A operação conta com equipes próprias de instalação, assistência técnica e engenharia, responsáveis pelo desenvolvimento técnico e pela aplicação dos projetos. Com mais de 200 colaboradores e capacitação contínua, a Arali assegura padrão de qualidade e precisão em cada entrega.",
 
   mission:
-    "Proporcionar o que há de melhor para nossos clientes.",
+    "Executar soluções em marcenaria sob medida com precisão técnica, controle de qualidade e fidelidade ao projeto.",
   vision:
-    "Ser reconhecida nacionalmente e internacionalmente como empresa modelo em seu ramo de atividade.",
-  values:
-    "Humildade, Ética, Trabalho em Equipe, Excelência em Atendimento, Qualidade e Inovação.",
+    "Consolidar a Arali como referência em execução técnica no cenário nacional e internacional, com processos consistentes e alta capacidade produtiva.",
+  values: [
+    "Precisão na execução",
+    "Compromisso com o projeto",
+    "Controle de qualidade",
+    "Responsabilidade técnica",
+    "Trabalho em equipe",
+  ],
 
   fsc: {
     description_1:

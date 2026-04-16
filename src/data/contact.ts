@@ -2,7 +2,9 @@ export const contact = {
   email: "contato@aralimoveis.com.br",
   phone: "+55 17 3206 0840",
   phoneRaw: "551732060840",
-  whatsapp: "https://api.whatsapp.com/send?phone=551732060846",
+  whatsappPhone: "+55 17 99633-8893",
+  whatsappPhoneRaw: "5517996338893",
+  whatsapp: "https://api.whatsapp.com/send?phone=5517996338893",
   instagram: "https://www.instagram.com/arali.oficial/",
   instagramHandle: "@arali.oficial",
   address: {

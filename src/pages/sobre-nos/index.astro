@@ -24,12 +24,12 @@ import { company } from "../../data/company";
     </div>
   </section>
 
-  <!-- Company History -->
+  <!-- Sobre a Arali -->
   <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <SectionHeading>Conheça a história da Arali Móveis</SectionHeading>
+          <SectionHeading>Sobre a Arali</SectionHeading>
           <p class="text-brown-light leading-relaxed text-lg">
             {company.history}
           </p>
@@ -46,40 +46,40 @@ import { company } from "../../data/company";
     </div>
   </section>
 
-  <!-- Technology Section -->
+  <!-- Estrutura e capacidade técnica -->
   <section class="py-16 lg:py-24 bg-brown text-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div class="order-2 lg:order-1">
           <img
             src="/images/projects/rdj-1.jpg"
-            alt="Tecnologia de ponta na fabricação"
+            alt="Estrutura e capacidade técnica"
             class="w-full rounded-lg"
             loading="lazy"
           />
         </div>
         <div class="order-1 lg:order-2">
           <SectionHeading dark>
-            Excelência em Fabricação de Móveis com Tecnologia de Ponta
+            Estrutura e capacidade técnica
           </SectionHeading>
           <p class="text-cream/70 leading-relaxed text-lg">
-            Com vasta experiência em todo o mercado nacional e internacional, a Arali Móveis conta com tecnologia de ponta em todos os processos de fabricação. Equipes especializadas em produção, gerenciamento de projetos, engenharia e montagem garantem excelência em cada etapa.
+            {company.structure}
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team Section -->
+  <!-- Equipe e execução -->
   <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <SectionHeading>
-            Arali Móveis Oferece Equipe Especializada
+            Equipe e execução
           </SectionHeading>
           <p class="text-brown-light leading-relaxed text-lg">
-            A Arali Móveis possui equipes de instalação, assistência técnica e engenharia para desenvolvimento detalhado dos produtos. São mais de 200 colaboradores treinados, com capacitação contínua para garantir a mais alta qualidade em cada projeto.
+            {company.team}
           </p>
         </div>
         <div>
@@ -132,7 +132,11 @@ import { company } from "../../data/company";
             </svg>
           </div>
           <h3 class="text-lg font-heading font-semibold text-burgundy uppercase tracking-wider mb-4">Valores</h3>
-          <p class="text-brown-light leading-relaxed">{company.values}</p>
+          <ul class="text-brown-light leading-relaxed text-left space-y-1">
+            {company.values.map((value: string) => (
+              <li>{value}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

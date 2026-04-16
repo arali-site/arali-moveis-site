@@ -4,7 +4,7 @@ import SectionHeading from "../../components/ui/SectionHeading.astro";
 import { getCollection } from "astro:content";
 
 const projects = (await getCollection("projects")).sort(
-  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)
+  (a, b) => a.data.order - b.data.order
 );
 ---
 
@@ -22,24 +22,24 @@ const projects = (await getCollection("projects")).sort(
   <!-- Gallery Grid -->
   <section class="py-12 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {projects.map((project) => (
-          <div class="group relative overflow-hidden rounded-lg aspect-[4/3]">
+          <a href={`/projetos/${project.data.slug}`} class="group relative overflow-hidden rounded-lg aspect-[4/3] block">
             <img
-              src={project.data.image}
+              src={project.data.cover}
               alt={project.data.title}
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-brown/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-brown/70 via-transparent to-transparent">
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="text-cream font-heading text-lg font-medium">{project.data.title}</h3>
-                {project.data.description && (
-                  <p class="text-cream/70 text-sm mt-1">{project.data.description}</p>
+                {project.data.location && (
+                  <p class="text-cream/60 text-sm mt-1">{project.data.location}</p>
                 )}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

@@ -1,0 +1,19 @@
+{
+  "title": "Casa 3M",
+  "slug": "casa-3m",
+  "location": "São Paulo, SP",
+  "architect": "Studio MK27",
+  "description": "Portas, painéis e marcenaria integrada em madeira natural. Integração interior–exterior resolvida por modulação precisa e continuidade material.",
+  "cover": "/images/projects/casa-3m/01.jpg",
+  "images": [
+    "/images/projects/casa-3m/01.jpg",
+    "/images/projects/casa-3m/02.jpg",
+    "/images/projects/casa-3m/03.jpg",
+    "/images/projects/casa-3m/04.jpg",
+    "/images/projects/casa-3m/05.jpg",
+    "/images/projects/casa-3m/06.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 1
+}

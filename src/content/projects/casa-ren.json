@@ -1,0 +1,17 @@
+{
+  "title": "Casa Ren",
+  "slug": "casa-ren",
+  "location": "",
+  "description": "",
+  "cover": "/images/projects/casa-ren/01.jpg",
+  "images": [
+    "/images/projects/casa-ren/01.jpg",
+    "/images/projects/casa-ren/02.jpg",
+    "/images/projects/casa-ren/03.jpg",
+    "/images/projects/casa-ren/04.jpg",
+    "/images/projects/casa-ren/05.jpg"
+  ],
+  "category": "residencial",
+  "featured": false,
+  "order": 9
+}

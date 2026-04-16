@@ -1,0 +1,31 @@
+{
+  "title": "Casa DBC",
+  "slug": "casa-dbc",
+  "location": "São José do Rio Preto, SP",
+  "description": "Marcenaria integrada à arquitetura, incluindo elementos internos e externos. Execução orientada por continuidade material, precisão construtiva e controle de modulação entre planos.",
+  "cover": "/images/projects/casa-dbc/01.jpg",
+  "images": [
+    "/images/projects/casa-dbc/01.jpg",
+    "/images/projects/casa-dbc/02.jpg",
+    "/images/projects/casa-dbc/03.jpg",
+    "/images/projects/casa-dbc/04.jpg",
+    "/images/projects/casa-dbc/05.jpg",
+    "/images/projects/casa-dbc/06.jpg",
+    "/images/projects/casa-dbc/07.jpg",
+    "/images/projects/casa-dbc/08.jpg",
+    "/images/projects/casa-dbc/09.jpg",
+    "/images/projects/casa-dbc/10.jpg",
+    "/images/projects/casa-dbc/11.jpg",
+    "/images/projects/casa-dbc/12.jpg",
+    "/images/projects/casa-dbc/13.jpg",
+    "/images/projects/casa-dbc/14.jpg",
+    "/images/projects/casa-dbc/15.jpg",
+    "/images/projects/casa-dbc/16.jpg",
+    "/images/projects/casa-dbc/17.jpg",
+    "/images/projects/casa-dbc/18.jpg",
+    "/images/projects/casa-dbc/19.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 3
+}

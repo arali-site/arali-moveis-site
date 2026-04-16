@@ -1,0 +1,26 @@
+{
+  "title": "Casa Varanda",
+  "slug": "casa-varanda",
+  "location": "São Paulo, SP",
+  "architect": "Bernardes Arquitetura",
+  "description": "Portas, painéis, brises e mobiliário integrados ao projeto. Continuidade entre interior e exterior, com precisão na execução e leitura unificada dos elementos.",
+  "cover": "/images/projects/casa-varanda/01.jpg",
+  "images": [
+    "/images/projects/casa-varanda/01.jpg",
+    "/images/projects/casa-varanda/02.jpg",
+    "/images/projects/casa-varanda/03.jpg",
+    "/images/projects/casa-varanda/04.jpg",
+    "/images/projects/casa-varanda/05.jpg",
+    "/images/projects/casa-varanda/06.jpg",
+    "/images/projects/casa-varanda/07.jpg",
+    "/images/projects/casa-varanda/08.jpg",
+    "/images/projects/casa-varanda/09.jpg",
+    "/images/projects/casa-varanda/10.jpg",
+    "/images/projects/casa-varanda/11.jpg",
+    "/images/projects/casa-varanda/12.jpg",
+    "/images/projects/casa-varanda/13.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 7
+}

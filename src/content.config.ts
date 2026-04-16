@@ -5,11 +5,16 @@ const projects = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
-    description: z.string().optional(),
-    image: z.string(),
-    category: z.string().optional(),
+    slug: z.string(),
+    location: z.string().optional(),
+    architect: z.string().optional(),
+    interiors: z.string().optional(),
+    description: z.string(),
+    cover: z.string(),
+    images: z.array(z.string()),
+    category: z.string().default("residencial"),
     featured: z.boolean().default(false),
-    order: z.number().optional(),
+    order: z.number(),
   }),
 });
 

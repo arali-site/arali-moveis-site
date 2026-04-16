@@ -1,0 +1,32 @@
+{
+  "title": "Casa BRM",
+  "slug": "casa-brm",
+  "location": "Litoral Brasileiro",
+  "architect": "Jacobsen Arquitetura",
+  "description": "Forro, portas, painéis e fachada em madeira. Forro em Tauari e fachada em Accoya, com continuidade entre interior e exterior e controle rigoroso de execução.",
+  "cover": "/images/projects/casa-brm/01.jpg",
+  "images": [
+    "/images/projects/casa-brm/01.jpg",
+    "/images/projects/casa-brm/02.jpg",
+    "/images/projects/casa-brm/03.jpg",
+    "/images/projects/casa-brm/04.jpg",
+    "/images/projects/casa-brm/05.jpg",
+    "/images/projects/casa-brm/06.jpg",
+    "/images/projects/casa-brm/07.jpg",
+    "/images/projects/casa-brm/08.jpg",
+    "/images/projects/casa-brm/09.jpg",
+    "/images/projects/casa-brm/10.jpg",
+    "/images/projects/casa-brm/11.jpg",
+    "/images/projects/casa-brm/12.jpg",
+    "/images/projects/casa-brm/13.jpg",
+    "/images/projects/casa-brm/14.jpg",
+    "/images/projects/casa-brm/15.jpg",
+    "/images/projects/casa-brm/16.jpg",
+    "/images/projects/casa-brm/17.jpg",
+    "/images/projects/casa-brm/18.jpg",
+    "/images/projects/casa-brm/19.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 2
+}

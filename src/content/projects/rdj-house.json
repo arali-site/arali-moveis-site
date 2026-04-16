@@ -1,0 +1,17 @@
+{
+  "title": "RDJ House",
+  "slug": "rdj-house",
+  "location": "Rio de Janeiro, RJ",
+  "architect": "Jacobsen Arquitetura",
+  "description": "Marcenaria integrada à arquitetura, incluindo elementos internos e externos. Execução orientada por continuidade material, precisão construtiva e integração com a envoltória do projeto.",
+  "cover": "/images/projects/rdj-house/01.jpg",
+  "images": [
+    "/images/projects/rdj-house/01.jpg",
+    "/images/projects/rdj-house/02.jpg",
+    "/images/projects/rdj-house/03.jpg",
+    "/images/projects/rdj-house/04.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 8
+}

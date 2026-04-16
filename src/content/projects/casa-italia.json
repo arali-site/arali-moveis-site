@@ -1,0 +1,18 @@
+{
+  "title": "Casa Itália",
+  "slug": "casa-italia",
+  "location": "São Paulo, SP",
+  "architect": "Isay Weinfeld",
+  "description": "Portas, painéis e mobiliário em madeira natural. Integração entre ambientes resolvida por continuidade espacial e precisão na execução.",
+  "cover": "/images/projects/casa-italia/01.jpg",
+  "images": [
+    "/images/projects/casa-italia/01.jpg",
+    "/images/projects/casa-italia/02.jpg",
+    "/images/projects/casa-italia/03.jpg",
+    "/images/projects/casa-italia/04.jpg",
+    "/images/projects/casa-italia/05.jpg"
+  ],
+  "category": "residencial",
+  "featured": true,
+  "order": 5
+}

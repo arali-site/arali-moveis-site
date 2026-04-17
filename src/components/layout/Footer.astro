@@ -15,13 +15,19 @@ import { contact } from "../../data/contact";
         <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">Contato</h3>
         <ul class="space-y-3 text-sm">
           <li>
-            <a href={`mailto:${contact.email}`} class="hover:text-cream transition-colors">
-              {contact.email}
+            <a href={`mailto:${contact.email}`} class="inline-flex items-start gap-3 hover:text-cream transition-colors">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
+                <iconify-icon icon="lucide:mail" width="20" height="20"></iconify-icon>
+              </span>
+              <span>{contact.email}</span>
             </a>
           </li>
           <li>
-            <a href={`tel:${contact.phoneRaw}`} class="hover:text-cream transition-colors">
-              {contact.phone}
+            <a href={`tel:${contact.phoneRaw}`} class="inline-flex items-start gap-3 hover:text-cream transition-colors">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
+                <iconify-icon icon="lucide:phone" width="20" height="20"></iconify-icon>
+              </span>
+              <span>{contact.phone}</span>
             </a>
           </li>
           <li>
@@ -31,8 +37,10 @@ import { contact } from "../../data/contact";
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 bg-burgundy hover:bg-burgundy-dark text-cream px-4 py-2 rounded-md text-sm transition-colors mt-2"
             >
-              <iconify-icon icon="simple-icons:whatsapp" width="20" height="20"></iconify-icon>
-              Fale conosco
+              <span class="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
+                <iconify-icon icon="simple-icons:whatsapp" width="18" height="18"></iconify-icon>
+              </span>
+              Fale Conosco
             </a>
           </li>
         </ul>
@@ -49,27 +57,31 @@ import { contact } from "../../data/contact";
           rel="noopener noreferrer"
           class="inline-flex items-center gap-3 hover:text-cream transition-colors text-sm"
         >
-          <iconify-icon icon="simple-icons:instagram" width="20" height="20"></iconify-icon>
+          <span class="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
+            <iconify-icon icon="simple-icons:instagram" width="18" height="18"></iconify-icon>
+          </span>
           {contact.instagramHandle}
         </a>
       </div>
 
       <!-- Address -->
       <div>
-        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6 flex items-center gap-2">
-          <iconify-icon icon="lucide:map-pin" width="20" height="20"></iconify-icon>
-          Endereço
-        </h3>
+        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">Endereço</h3>
         <a
           href={contact.address.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm leading-relaxed hover:text-cream transition-colors block"
+          class="flex items-start gap-3 text-sm leading-relaxed hover:text-cream transition-colors"
         >
-          <p>{contact.address.street}</p>
-          <p>{contact.address.neighborhood}</p>
-          <p>{contact.address.city} | {contact.address.state}</p>
-          <p>CEP {contact.address.cep}</p>
+          <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
+            <iconify-icon icon="lucide:map-pin" width="20" height="20"></iconify-icon>
+          </span>
+          <span>
+            <span class="block">{contact.address.street}</span>
+            <span class="block">{contact.address.neighborhood}</span>
+            <span class="block">{contact.address.city} | {contact.address.state}</span>
+            <span class="block">CEP {contact.address.cep}</span>
+          </span>
         </a>
       </div>
     </div>

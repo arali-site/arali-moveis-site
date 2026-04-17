@@ -9,7 +9,7 @@ import { contact } from "../../data/contact";
   <!-- Page Header -->
   <section class="py-12 lg:py-20 bg-burgundy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <SectionHeading dark>Fale conosco</SectionHeading>
+      <SectionHeading dark>Fale Conosco</SectionHeading>
       <p class="text-cream/70 max-w-2xl text-lg leading-relaxed">
         Entre em contato para conhecer nossas soluções em marcenaria de alto padrão.
       </p>
@@ -88,19 +88,25 @@ import { contact } from "../../data/contact";
             <h3 class="text-xl font-heading font-medium text-brown mb-6">Informações de contato</h3>
             <ul class="space-y-4 text-brown-light">
               <li class="flex items-start gap-3">
-                <iconify-icon icon="lucide:mail" width="20" height="20" class="mt-0.5 text-burgundy flex-shrink-0"></iconify-icon>
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center text-burgundy leading-none">
+                  <iconify-icon icon="lucide:mail" width="20" height="20"></iconify-icon>
+                </span>
                 <a href={`mailto:${contact.email}`} class="hover:text-burgundy transition-colors">
                   {contact.email}
                 </a>
               </li>
               <li class="flex items-start gap-3">
-                <iconify-icon icon="lucide:phone" width="20" height="20" class="mt-0.5 text-burgundy flex-shrink-0"></iconify-icon>
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center text-burgundy leading-none">
+                  <iconify-icon icon="lucide:phone" width="20" height="20"></iconify-icon>
+                </span>
                 <a href={`tel:${contact.phoneRaw}`} class="hover:text-burgundy transition-colors">
                   {contact.phone}
                 </a>
               </li>
               <li class="flex items-start gap-3">
-                <iconify-icon icon="simple-icons:whatsapp" width="20" height="20" class="mt-0.5 text-burgundy flex-shrink-0"></iconify-icon>
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center text-burgundy leading-none">
+                  <iconify-icon icon="simple-icons:whatsapp" width="18" height="18"></iconify-icon>
+                </span>
                 <div>
                   <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" class="hover:text-burgundy transition-colors block">
                     WhatsApp — {contact.whatsappPhone}
@@ -112,20 +118,22 @@ import { contact } from "../../data/contact";
 
           <!-- Address -->
           <div>
-            <h3 class="text-xl font-heading font-medium text-brown mb-4 flex items-center gap-2">
-              <iconify-icon icon="lucide:map-pin" width="20" height="20" class="text-burgundy"></iconify-icon>
-              Endereço
-            </h3>
+            <h3 class="text-xl font-heading font-medium text-brown mb-4">Endereço</h3>
             <a
               href={contact.address.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-brown-light hover:text-burgundy transition-colors block leading-relaxed"
+              class="flex items-start gap-3 text-brown-light hover:text-burgundy transition-colors leading-relaxed"
             >
-              <p>{contact.address.street}</p>
-              <p>{contact.address.neighborhood}</p>
-              <p>{contact.address.city} | {contact.address.state}</p>
-              <p>CEP {contact.address.cep}</p>
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center text-burgundy leading-none">
+                <iconify-icon icon="lucide:map-pin" width="20" height="20"></iconify-icon>
+              </span>
+              <span>
+                <span class="block">{contact.address.street}</span>
+                <span class="block">{contact.address.neighborhood}</span>
+                <span class="block">{contact.address.city} | {contact.address.state}</span>
+                <span class="block">CEP {contact.address.cep}</span>
+              </span>
             </a>
           </div>
 
@@ -138,7 +146,9 @@ import { contact } from "../../data/contact";
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-burgundy hover:text-burgundy-dark transition-colors"
             >
-              <iconify-icon icon="simple-icons:instagram" width="20" height="20"></iconify-icon>
+              <span class="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center text-burgundy leading-none">
+                <iconify-icon icon="simple-icons:instagram" width="18" height="18"></iconify-icon>
+              </span>
               {contact.instagramHandle}
             </a>
           </div>

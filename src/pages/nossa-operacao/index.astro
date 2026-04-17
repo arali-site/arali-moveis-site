@@ -5,11 +5,11 @@ import Button from "../../components/ui/Button.astro";
 import { contact } from "../../data/contact";
 ---
 
-<BaseLayout title="Nossa Operação — Arali Móveis" description="Acompanhe a execução da Arali em tempo real. Registros da fábrica, equipe em operação e projetos em desenvolvimento.">
+<BaseLayout title="Nossa Operação — Arali" description="Acompanhe a execução da Arali em tempo real. Registros da fábrica, equipe em operação e projetos em desenvolvimento.">
   <!-- Page Header -->
   <section class="py-12 lg:py-20 bg-burgundy">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <SectionHeading dark>NOSSA OPERAÇÃO</SectionHeading>
+      <SectionHeading dark>Nossa Operação</SectionHeading>
       <p class="text-cream/70 max-w-2xl text-lg leading-relaxed">
         Acompanhe a execução da Arali em tempo real.
       </p>
@@ -23,10 +23,8 @@ import { contact } from "../../data/contact";
   <section class="py-20 lg:py-32">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Instagram Icon -->
-      <div class="mb-8">
-        <svg class="w-16 h-16 mx-auto text-burgundy" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
+      <div class="mb-8 flex justify-center">
+        <iconify-icon icon="simple-icons:instagram" width="64" height="64" class="text-burgundy"></iconify-icon>
       </div>
 
       <h2 class="text-2xl sm:text-3xl font-heading font-medium text-brown mb-4">
@@ -41,9 +39,7 @@ import { contact } from "../../data/contact";
         rel="noopener noreferrer"
         variant="primary"
       >
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
+        <iconify-icon icon="simple-icons:instagram" width="20" height="20"></iconify-icon>
         Acompanhe no Instagram
       </Button>
       <p class="text-brown-light/60 text-sm mt-4">{contact.instagramHandle}</p>
@@ -55,25 +51,25 @@ import { contact } from "../../data/contact";
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <img
-          src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&h=600&fit=crop"
+          src="/images/operacao/01.jpg"
           alt="Equipe em operação na fábrica"
           class="w-full aspect-square object-cover rounded-lg"
           loading="lazy"
         />
         <img
-          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=600&fit=crop"
+          src="/images/operacao/02.jpg"
           alt="Processo de fabricação de móveis"
           class="w-full aspect-square object-cover rounded-lg"
           loading="lazy"
         />
         <img
-          src="https://images.unsplash.com/photo-1622465425238-4834de56ee1e?w=600&h=600&fit=crop"
+          src="/images/operacao/03.webp"
           alt="Marcenaria e produção"
           class="w-full aspect-square object-cover rounded-lg"
           loading="lazy"
         />
         <img
-          src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&h=600&fit=crop"
+          src="/images/operacao/04.jpg"
           alt="Projetos em desenvolvimento"
           class="w-full aspect-square object-cover rounded-lg"
           loading="lazy"

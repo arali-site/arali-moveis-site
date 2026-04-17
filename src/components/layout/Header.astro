@@ -19,12 +19,11 @@ const currentPath = Astro.url.pathname;
       <!-- Logo -->
       <a href="/" class="flex-shrink-0">
         <img
-          src="/favicon.svg"
-          alt="Arali Móveis"
-          class:list={[
-            "h-12 lg:h-16 w-auto transition-all duration-300",
-            transparent ? "brightness-0 invert header-logo" : "",
-          ]}
+          src={transparent ? "/logos/assinatura-cream.svg" : "/logos/assinatura-burgundy.svg"}
+          data-src-cream="/logos/assinatura-cream.svg"
+          data-src-burgundy="/logos/assinatura-burgundy.svg"
+          alt="Arali"
+          class="header-logo h-8 lg:h-10 w-auto transition-all duration-300"
         />
       </a>
 
@@ -70,12 +69,8 @@ const currentPath = Astro.url.pathname;
           aria-label="Abrir menu"
           aria-expanded="false"
         >
-          <svg class="w-6 h-6 hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          <iconify-icon icon="lucide:menu" width="24" height="24" class="hamburger-icon"></iconify-icon>
+          <iconify-icon icon="lucide:x" width="24" height="24" class="close-icon hidden"></iconify-icon>
         </button>
       </div>
     </div>
@@ -124,34 +119,32 @@ const currentPath = Astro.url.pathname;
     if (scrolled) {
       header.classList.add("bg-cream/95", "backdrop-blur-sm", "shadow-sm");
       if (isTransparent) {
-        // Switch to dark text/logo when scrolled
         header.querySelectorAll(".header-link").forEach((link) => {
           link.classList.remove("text-cream", "text-cream/80", "hover:text-cream");
           link.classList.add("text-brown", "hover:text-burgundy");
         });
-        const logo = header.querySelector(".header-logo") as HTMLElement;
+        const logo = header.querySelector(".header-logo") as HTMLImageElement | null;
         if (logo) {
-          logo.classList.remove("brightness-0", "invert");
+          const burgundy = logo.dataset.srcBurgundy;
+          if (burgundy) logo.src = burgundy;
         }
-        const hamburgerBtn = toggle;
-        hamburgerBtn.classList.remove("text-cream");
-        hamburgerBtn.classList.add("text-brown");
+        toggle.classList.remove("text-cream");
+        toggle.classList.add("text-brown");
       }
     } else {
       header.classList.remove("bg-cream/95", "backdrop-blur-sm", "shadow-sm");
       if (isTransparent) {
-        // Restore light text/logo
         header.querySelectorAll(".header-link").forEach((link) => {
           link.classList.add("text-cream/80", "hover:text-cream");
           link.classList.remove("text-brown", "hover:text-burgundy");
         });
-        const logo = header.querySelector(".header-logo") as HTMLElement;
+        const logo = header.querySelector(".header-logo") as HTMLImageElement | null;
         if (logo) {
-          logo.classList.add("brightness-0", "invert");
+          const cream = logo.dataset.srcCream;
+          if (cream) logo.src = cream;
         }
-        const hamburgerBtn = toggle;
-        hamburgerBtn.classList.add("text-cream");
-        hamburgerBtn.classList.remove("text-brown");
+        toggle.classList.add("text-cream");
+        toggle.classList.remove("text-brown");
       }
     }
   }

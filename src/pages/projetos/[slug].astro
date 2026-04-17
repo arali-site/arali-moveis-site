@@ -14,12 +14,12 @@ const { project } = Astro.props;
 const { title, location, architect, interiors, description, images } = project.data;
 ---
 
-<BaseLayout title={`${title} — Arali Móveis`} description={description || `Projeto ${title} — Arali Móveis`}>
+<BaseLayout title={`${title} — Arali`} description={description || `Projeto ${title} — Arali`}>
   <div class="bg-burgundy min-h-screen">
     <!-- Back Link -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
       <a href="/projetos/" class="inline-flex items-center gap-2 text-cream/60 hover:text-cream transition-colors text-sm font-body">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        <iconify-icon icon="lucide:arrow-left" width="16" height="16"></iconify-icon>
         Voltar aos projetos
       </a>
     </div>

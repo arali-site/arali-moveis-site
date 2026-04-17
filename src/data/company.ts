@@ -1,5 +1,5 @@
 export const company = {
-  name: "Arali Móveis",
+  name: "Arali",
   slogan: "Engenharia Aplica à Madeira",
   url: "https://www.aralimoveis.com.br",
 

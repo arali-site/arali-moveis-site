@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "Arali Móveis — Engenharia Aplica à Madeira. Soluções de alto padrão em marcenaria.",
+  description = "Arali — Engenharia Aplica à Madeira. Soluções de alto padrão em marcenaria.",
   transparentHeader = false,
 } = Astro.props;
 ---
@@ -24,6 +24,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <link rel="preload" href="/fonts/Montserrat-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/fonts/DMSans-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <meta name="generator" content={Astro.generator} />

@@ -3,6 +3,11 @@
   "slug": "casa-dbc",
   "location": "São José do Rio Preto, SP",
   "description": "Marcenaria integrada à arquitetura, incluindo elementos internos e externos. Execução orientada por continuidade material, precisão construtiva e controle de modulação entre planos.",
+  "en": {
+    "location": "São José do Rio Preto, SP",
+    "description": "Millwork integrated with the architecture, including interior and exterior elements. Execution guided by material continuity, construction precision, and modulation control between planes.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-dbc/01.jpg",
   "images": [
     "/images/projects/casa-dbc/01.jpg",

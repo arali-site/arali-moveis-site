@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import SectionHeading from "../../components/ui/SectionHeading.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SectionHeading from "../../../components/ui/SectionHeading.astro";
 import { getCollection } from "astro:content";
-import { getDictionary, getProjectPath, localizeProjectData } from "../../data/i18n";
+import { getDictionary, getProjectPath, localizeProjectData } from "../../../data/i18n";
 
-const locale = "pt-BR";
+const locale = "en";
 const dict = getDictionary(locale);
 const projects = (await getCollection("projects")).sort(
   (a, b) => a.data.order - b.data.order

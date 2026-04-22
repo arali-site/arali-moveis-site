@@ -5,6 +5,11 @@
   "architect": "Bernardes Arquitetura",
   "interiors": "Marina Linhares Interiores",
   "description": "Marcenaria integrada à arquitetura, com elementos contínuos entre planos verticais e horizontais. Execução orientada por modulação precisa, controle de alinhamento e continuidade material ao longo do projeto.",
+  "en": {
+    "location": "Ribeirão Preto, SP",
+    "description": "Millwork integrated with the architecture, with continuous elements across vertical and horizontal planes. Execution guided by precise modulation, alignment control, and material continuity throughout the project.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-living/01.jpg",
   "images": [
     "/images/projects/casa-living/01.jpg",

@@ -4,6 +4,11 @@
   "location": "São Paulo, SP",
   "architect": "Studio Arthur Casas",
   "description": "Portas, painéis e mobiliário integrados ao projeto. Fachada automatizada em madeira Accoya, com desempenho técnico e continuidade construtiva.",
+  "en": {
+    "location": "São Paulo, SP",
+    "description": "Doors, panels, and furniture integrated into the project. An automated Accoya wood facade combines technical performance with construction continuity.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-pacaembu/01.jpg",
   "images": [
     "/images/projects/casa-pacaembu/01.jpg",

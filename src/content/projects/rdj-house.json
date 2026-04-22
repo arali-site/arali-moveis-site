@@ -4,6 +4,11 @@
   "location": "Rio de Janeiro, RJ",
   "architect": "Jacobsen Arquitetura",
   "description": "Marcenaria integrada à arquitetura, incluindo elementos internos e externos. Execução orientada por continuidade material, precisão construtiva e integração com a envoltória do projeto.",
+  "en": {
+    "location": "Rio de Janeiro, RJ",
+    "description": "Millwork integrated with the architecture, including interior and exterior elements. Execution guided by material continuity, construction precision, and integration with the project's envelope.",
+    "category": "residential"
+  },
   "cover": "/images/projects/rdj-house/01.jpg",
   "images": [
     "/images/projects/rdj-house/01.jpg",

@@ -1,10 +1,18 @@
 ---
 import { company } from "../../data/company";
+import { getDictionary, type Locale } from "../../data/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "pt-BR" } = Astro.props;
+const dict = getDictionary(locale);
 
 const stats = [
-  { value: company.stats.years, suffix: "+", label: "Anos de Mercado" },
-  { value: company.stats.employees, suffix: "+", label: "Colaboradores" },
-  { value: company.stats.projects, suffix: "+", label: "Projetos Entregues" },
+  { value: company.stats.years, suffix: "+", label: dict.home.stats.years },
+  { value: company.stats.employees, suffix: "+", label: dict.home.stats.employees },
+  { value: company.stats.projects, suffix: "+", label: dict.home.stats.projects },
 ];
 ---
 

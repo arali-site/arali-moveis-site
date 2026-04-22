@@ -4,6 +4,11 @@
   "location": "São Paulo, SP",
   "architect": "Isay Weinfeld",
   "description": "Portas, painéis e mobiliário em madeira natural. Integração entre ambientes resolvida por continuidade espacial e precisão na execução.",
+  "en": {
+    "location": "São Paulo, SP",
+    "description": "Doors, panels, and furniture in natural wood. Integration between spaces is resolved through spatial continuity and precise execution.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-italia/01.jpg",
   "images": [
     "/images/projects/casa-italia/01.jpg",

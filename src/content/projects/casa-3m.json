@@ -4,6 +4,11 @@
   "location": "São Paulo, SP",
   "architect": "Studio MK27",
   "description": "Portas, painéis e marcenaria integrada em madeira natural. Integração interior–exterior resolvida por modulação precisa e continuidade material.",
+  "en": {
+    "location": "São Paulo, SP",
+    "description": "Doors, panels, and integrated millwork in natural wood. The interior-exterior connection is resolved through precise modulation and material continuity.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-3m/01.jpg",
   "images": [
     "/images/projects/casa-3m/01.jpg",

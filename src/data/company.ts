@@ -1,6 +1,7 @@
 export const company = {
   name: "Arali",
   slogan: "Engenharia Aplica à Madeira",
+  sloganEn: "Engineering Applied to Wood",
   url: "https://www.aralimoveis.com.br",
 
   stats: {
@@ -42,6 +43,36 @@ export const company = {
     description_2:
       "A certificação assegura rastreabilidade da cadeia produtiva e contribui para a preservação dos recursos florestais.",
     link: "https://br.fsc.org/br-pt",
+  },
+
+  en: {
+    history:
+      "Founded in 2011 in São José do Rio Preto, SP, by Jeferson (Cuca) and Fábio Arali, Arali began operating in a 300 m² warehouse with a team of 8 people. Today, the operation is led by an integrated technical structure, with direct leadership from the founders and close collaboration between engineering, project, and production teams. The company now operates from an industrial facility of approximately 10,000 m² with more than 200 employees, maintaining a focus on execution, precision, and quality control at every stage.",
+
+    structure:
+      "Arali works on projects throughout Brazil and abroad, with an operation structured around technology applied to manufacturing processes. Its multidisciplinary technical team includes architects, engineers, and professionals specialized in detailing and management, ensuring consistency and control throughout the entire execution.",
+
+    team:
+      "The operation includes in-house installation, technical assistance, and engineering teams responsible for technical development and project application. With more than 200 employees and continuous training, Arali ensures quality and precision in every delivery.",
+
+    mission:
+      "To execute custom millwork solutions with technical precision, quality control, and fidelity to the project.",
+    vision:
+      "To consolidate Arali as a reference in technical execution in Brazil and abroad, with consistent processes and high production capacity.",
+    values: [
+      "Precision in execution",
+      "Commitment to the project",
+      "Quality control",
+      "Technical responsibility",
+      "Teamwork",
+    ],
+
+    fsc: {
+      description_1:
+        "The FSC® (Forest Stewardship Council®) label certifies the origin of forest products from responsible management. It ensures that wood and wood-based materials are obtained through environmentally appropriate, socially responsible, and economically viable processes.",
+      description_2:
+        "Certification ensures traceability across the production chain and contributes to the preservation of forest resources.",
+    },
   },
 
   documents: {

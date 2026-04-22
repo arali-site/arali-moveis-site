@@ -1,13 +1,12 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import SectionHeading from "../../components/ui/SectionHeading.astro";
-import Button from "../../components/ui/Button.astro";
-import { company } from "../../data/company";
-import { getDictionary } from "../../data/i18n";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SectionHeading from "../../../components/ui/SectionHeading.astro";
+import { company } from "../../../data/company";
+import { getDictionary } from "../../../data/i18n";
 
-const locale = "pt-BR";
+const locale = "en";
 const dict = getDictionary(locale);
-const companyCopy = locale === "en" ? company.en : company;
+const companyCopy = company.en;
 ---
 
 <BaseLayout title={dict.about.title} description={dict.about.description} locale={locale}>
@@ -29,7 +28,7 @@ const companyCopy = locale === "en" ? company.en : company;
     </div>
   </section>
 
-  <!-- Sobre a Arali -->
+  <!-- About Arali -->
   <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -51,7 +50,7 @@ const companyCopy = locale === "en" ? company.en : company;
     </div>
   </section>
 
-  <!-- Estrutura e capacidade técnica -->
+  <!-- Structure and technical capacity -->
   <section class="py-16 lg:py-24 bg-brown text-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -75,7 +74,7 @@ const companyCopy = locale === "en" ? company.en : company;
     </div>
   </section>
 
-  <!-- Equipe e execução -->
+  <!-- Team and execution -->
   <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

@@ -1,12 +1,24 @@
 ---
-import { navLinks } from "../../data/navigation";
+import {
+  getDictionary,
+  getNavLinks,
+  getPagePath,
+  type Locale,
+} from "../../data/i18n";
 
 interface Props {
   transparent?: boolean;
+  locale?: Locale;
+  alternatePath?: string;
 }
 
-const { transparent = false } = Astro.props;
+const { transparent = false, locale = "pt-BR", alternatePath = "/en/" } = Astro.props;
 const currentPath = Astro.url.pathname;
+const dict = getDictionary(locale);
+const navLinks = getNavLinks(locale);
+const homePath = getPagePath("home", locale);
+const englishPath = locale === "en" ? currentPath : alternatePath;
+const portuguesePath = locale === "pt-BR" ? currentPath : alternatePath;
 ---
 
 <header
@@ -17,7 +29,7 @@ const currentPath = Astro.url.pathname;
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20 lg:h-24">
       <!-- Logo -->
-      <a href="/" class="flex-shrink-0">
+      <a href={homePath} class="flex-shrink-0">
         <img
           src={transparent ? "/logos/assinatura-cream.svg" : "/logos/assinatura-burgundy.svg"}
           data-src-cream="/logos/assinatura-cream.svg"
@@ -54,9 +66,25 @@ const currentPath = Astro.url.pathname;
           "hidden lg:flex items-center gap-2 text-sm transition-colors duration-200",
           transparent ? "text-cream/70" : "text-brown-light",
         ]}>
-          <span class="opacity-50 cursor-pointer hover:opacity-100 transition-opacity">EN</span>
+          <a
+            href={englishPath}
+            class:list={[
+              "transition-opacity hover:opacity-100",
+              locale === "en" ? "font-medium" : "opacity-50",
+            ]}
+          >
+            EN
+          </a>
           <span class="opacity-30">|</span>
-          <span class="font-medium">PT</span>
+          <a
+            href={portuguesePath}
+            class:list={[
+              "transition-opacity hover:opacity-100",
+              locale === "pt-BR" ? "font-medium" : "opacity-50",
+            ]}
+          >
+            PT
+          </a>
         </div>
 
         <!-- Mobile Hamburger -->
@@ -66,7 +94,7 @@ const currentPath = Astro.url.pathname;
             "lg:hidden p-2 transition-colors duration-200",
             transparent ? "text-cream" : "text-brown",
           ]}
-          aria-label="Abrir menu"
+          aria-label={dict.header.openMenu}
           aria-expanded="false"
         >
           <iconify-icon icon="lucide:menu" width="24" height="24" class="hamburger-icon"></iconify-icon>
@@ -93,9 +121,25 @@ const currentPath = Astro.url.pathname;
         </a>
       ))}
       <div class="flex items-center gap-2 text-sm text-brown-light pt-2 border-t border-cream-dark">
-        <span class="opacity-50 cursor-pointer hover:opacity-100">EN</span>
+        <a
+          href={englishPath}
+          class:list={[
+            "hover:opacity-100",
+            locale === "en" ? "font-medium" : "opacity-50",
+          ]}
+        >
+          EN
+        </a>
         <span class="opacity-30">|</span>
-        <span class="font-medium">PT</span>
+        <a
+          href={portuguesePath}
+          class:list={[
+            "hover:opacity-100",
+            locale === "pt-BR" ? "font-medium" : "opacity-50",
+          ]}
+        >
+          PT
+        </a>
       </div>
     </nav>
   </div>

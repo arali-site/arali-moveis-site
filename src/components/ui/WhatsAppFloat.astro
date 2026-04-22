@@ -1,5 +1,13 @@
 ---
 import { contact } from "../../data/contact";
+import { getDictionary, type Locale } from "../../data/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "pt-BR" } = Astro.props;
+const dict = getDictionary(locale);
 ---
 
 <a
@@ -7,7 +15,7 @@ import { contact } from "../../data/contact";
   target="_blank"
   rel="noopener noreferrer"
   class="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all hover:scale-110 hover:bg-green-600"
-  aria-label="Fale conosco pelo WhatsApp"
+  aria-label={`${dict.footer.whatsapp} WhatsApp`}
 >
   <span class="inline-flex h-7 w-7 items-center justify-center leading-none">
     <iconify-icon icon="simple-icons:whatsapp" width="26" height="26"></iconify-icon>

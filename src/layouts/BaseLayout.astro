@@ -4,26 +4,50 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import WhatsAppFloat from "../components/ui/WhatsAppFloat.astro";
 import Analytics from "@vercel/analytics/astro";
+import { company } from "../data/company";
+import {
+  getAlternatePath,
+  getDictionary,
+  langAttrs,
+  type Locale,
+} from "../data/i18n";
 
 interface Props {
   title: string;
   description?: string;
+  locale?: Locale;
+  alternatePath?: string;
   transparentHeader?: boolean;
 }
 
 const {
   title,
-  description = "Arali — Engenharia Aplica à Madeira. Soluções de alto padrão em marcenaria.",
+  locale = "pt-BR",
+  alternatePath,
   transparentHeader = false,
 } = Astro.props;
+
+const dict = getDictionary(locale);
+const description = Astro.props.description ?? dict.common.defaultDescription;
+const currentPath = Astro.url.pathname;
+const resolvedAlternatePath = alternatePath ?? getAlternatePath(currentPath, locale);
+const ptPath = locale === "pt-BR" ? currentPath : resolvedAlternatePath;
+const enPath = locale === "en" ? currentPath : resolvedAlternatePath;
+const canonicalUrl = new URL(currentPath, company.url).toString();
+const ptUrl = new URL(ptPath, company.url).toString();
+const enUrl = new URL(enPath, company.url).toString();
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang={langAttrs[locale]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="pt-BR" href={ptUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={ptUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script is:inline src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <link rel="preload" href="/fonts/Montserrat-Variable.ttf" as="font" type="font/ttf" crossorigin />
@@ -32,12 +56,12 @@ const {
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col">
-    <Header transparent={transparentHeader} />
+    <Header transparent={transparentHeader} locale={locale} alternatePath={resolvedAlternatePath} />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
-    <WhatsAppFloat />
+    <Footer locale={locale} />
+    <WhatsAppFloat locale={locale} />
     <Analytics />
   </body>
 </html>

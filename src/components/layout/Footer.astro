@@ -1,5 +1,13 @@
 ---
 import { contact } from "../../data/contact";
+import { getDictionary, type Locale } from "../../data/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "pt-BR" } = Astro.props;
+const dict = getDictionary(locale);
 ---
 
 <footer class="bg-brown text-cream/80">
@@ -12,7 +20,7 @@ import { contact } from "../../data/contact";
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
       <!-- Contact -->
       <div>
-        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">Contato</h3>
+        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">{dict.footer.contact}</h3>
         <ul class="space-y-3 text-sm">
           <li>
             <a href={`mailto:${contact.email}`} class="inline-flex items-start gap-3 hover:text-cream transition-colors">
@@ -40,7 +48,7 @@ import { contact } from "../../data/contact";
               <span class="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center leading-none">
                 <iconify-icon icon="simple-icons:whatsapp" width="18" height="18"></iconify-icon>
               </span>
-              Fale Conosco
+              {dict.footer.whatsapp}
             </a>
           </li>
         </ul>
@@ -49,7 +57,7 @@ import { contact } from "../../data/contact";
       <!-- Instagram -->
       <div>
         <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">
-          Acompanhe nosso Instagram
+          {dict.footer.instagram}
         </h3>
         <a
           href={contact.instagram}
@@ -66,7 +74,7 @@ import { contact } from "../../data/contact";
 
       <!-- Address -->
       <div>
-        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">Endereço</h3>
+        <h3 class="text-cream font-heading text-sm tracking-widest uppercase mb-6">{dict.footer.address}</h3>
         <a
           href={contact.address.mapsUrl}
           target="_blank"
@@ -80,7 +88,7 @@ import { contact } from "../../data/contact";
             <span class="block">{contact.address.street}</span>
             <span class="block">{contact.address.neighborhood}</span>
             <span class="block">{contact.address.city} | {contact.address.state}</span>
-            <span class="block">CEP {contact.address.cep}</span>
+            <span class="block">{dict.common.postalCode} {contact.address.cep}</span>
           </span>
         </a>
       </div>
@@ -90,7 +98,7 @@ import { contact } from "../../data/contact";
   <!-- Copyright -->
   <div class="border-t border-cream/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-cream/50">
-      <p>&copy; {new Date().getFullYear()} Arali. Todos os direitos reservados.</p>
+      <p>&copy; {new Date().getFullYear()} Arali. {dict.footer.rights}</p>
     </div>
   </div>
 </footer>

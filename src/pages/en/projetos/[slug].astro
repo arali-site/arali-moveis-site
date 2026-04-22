@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { getDictionary, getPagePath, localizeProjectData } from "../../data/i18n";
+import { getDictionary, getPagePath, localizeProjectData } from "../../../data/i18n";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const locale = "pt-BR";
+const locale = "en";
 const dict = getDictionary(locale);
 const data = localizeProjectData(project.data, locale);
 const { title, location, architect, interiors, description, images } = data;

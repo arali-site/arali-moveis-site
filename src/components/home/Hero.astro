@@ -1,5 +1,13 @@
 ---
 import Button from "../ui/Button.astro";
+import { getDictionary, getPagePath, type Locale } from "../../data/i18n";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "pt-BR" } = Astro.props;
+const dict = getDictionary(locale);
 ---
 
 <section class="relative h-screen min-h-[600px] flex items-end pb-24 lg:pb-32 overflow-hidden">
@@ -7,7 +15,7 @@ import Button from "../ui/Button.astro";
   <div class="absolute inset-0">
     <img
       src="/images/projects/rdj-house/01.jpg"
-      alt="Projeto arquitetônico Arali"
+      alt={dict.home.heroAlt}
       class="w-full h-full object-cover object-top"
       loading="eager"
     />
@@ -21,17 +29,15 @@ import Button from "../ui/Button.astro";
         ARALI
       </p>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-medium text-cream leading-tight mb-4">
-        <div>ENGENHARIA</div>
-        <div>APLICADA À</div>
-        <div>MADEIRA</div>
+        {dict.home.headline.map((line) => <div>{line}</div>)}
       </h1>
       <p class="text-cream/70 text-lg lg:text-xl mb-8 max-w-lg leading-relaxed">
-        Soluções de alto padrão em marcenaria para projetos nacionais e internacionais.
+        {dict.home.intro}
       </p>
       <div class="flex flex-wrap gap-4">
-        <Button href="/projetos/" variant="primary">Nossos Projetos</Button>
-        <Button href="/contato/" variant="outline" class="border-cream/50 text-cream hover:bg-cream hover:text-brown">
-          Fale conosco
+        <Button href={getPagePath("projects", locale)} variant="primary">{dict.home.projectsCta}</Button>
+        <Button href={getPagePath("contact", locale)} variant="outline" class="border-cream/50 text-cream hover:bg-cream hover:text-brown">
+          {dict.home.contactCta}
         </Button>
       </div>
     </div>

@@ -10,6 +10,14 @@ const projects = defineCollection({
     architect: z.string().optional(),
     interiors: z.string().optional(),
     description: z.string(),
+    en: z
+      .object({
+        title: z.string().optional(),
+        location: z.string().optional(),
+        description: z.string().optional(),
+        category: z.string().optional(),
+      })
+      .optional(),
     cover: z.string(),
     images: z.array(z.string()),
     category: z.string().default("residencial"),

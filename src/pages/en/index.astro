@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/home/Hero.astro";
+import StatsCounter from "../../components/home/StatsCounter.astro";
+import FscSection from "../../components/home/FscSection.astro";
+import { getDictionary } from "../../data/i18n";
+
+const locale = "en";
+const dict = getDictionary(locale);
+---
+
+<BaseLayout title={dict.home.title} locale={locale} transparentHeader>
+  <Hero locale={locale} />
+  <StatsCounter locale={locale} />
+  <FscSection locale={locale} />
+</BaseLayout>

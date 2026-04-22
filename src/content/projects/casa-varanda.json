@@ -4,6 +4,11 @@
   "location": "São Paulo, SP",
   "architect": "Bernardes Arquitetura",
   "description": "Portas, painéis, brises e mobiliário integrados ao projeto. Continuidade entre interior e exterior, com precisão na execução e leitura unificada dos elementos.",
+  "en": {
+    "location": "São Paulo, SP",
+    "description": "Doors, panels, brise-soleils, and furniture integrated into the project. Continuity between interior and exterior spaces, with precise execution and a unified reading of the elements.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-varanda/01.jpg",
   "images": [
     "/images/projects/casa-varanda/01.jpg",

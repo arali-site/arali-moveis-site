@@ -4,6 +4,11 @@
   "location": "Litoral Brasileiro",
   "architect": "Jacobsen Arquitetura",
   "description": "Forro, portas, painéis e fachada em madeira. Forro em Tauari e fachada em Accoya, com continuidade entre interior e exterior e controle rigoroso de execução.",
+  "en": {
+    "location": "Brazilian Coast",
+    "description": "Wood ceilings, doors, panels, and facade. Tauari ceilings and an Accoya facade create continuity between interior and exterior spaces, with rigorous execution control.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-brm/01.jpg",
   "images": [
     "/images/projects/casa-brm/01.jpg",

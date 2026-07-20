@@ -1,8 +1,15 @@
 {
-  "title": "Casa REN",
+  "title": "REN Apartment",
   "slug": "casa-ren",
-  "location": "",
-  "description": "",
+  "location": "Nova Lima, MG",
+  "architect": "Jacobsen Arquitetura",
+  "description": "Brises, painéis e elementos em madeira integrados à arquitetura. Execução orientada pela continuidade material, precisão técnica e controle dos detalhes construtivos.",
+  "en": {
+    "title": "REN Apartment",
+    "location": "Nova Lima, MG",
+    "description": "Wood brises, panels, and elements integrated with the architecture. Execution guided by material continuity, technical precision, and control of construction details.",
+    "category": "residential"
+  },
   "cover": "/images/projects/casa-ren/01.jpg",
   "images": [
     "/images/projects/casa-ren/01.jpg",

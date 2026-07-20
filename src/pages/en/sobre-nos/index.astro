@@ -7,21 +7,33 @@ import { getDictionary } from "../../../data/i18n";
 const locale = "en";
 const dict = getDictionary(locale);
 const companyCopy = company.en;
+const aboutGalleryImages = [
+  { src: "/images/sobre/04.jpg", alt: dict.about.galleryAlts[0] },
+  { src: "/images/sobre/02.jpeg", alt: dict.about.galleryAlts[1] },
+  { src: "/images/sobre/01.jpeg", alt: dict.about.galleryAlts[2] },
+  { src: "/images/sobre/03.jpg", alt: dict.about.galleryAlts[3] },
+];
 ---
 
 <BaseLayout title={dict.about.title} description={dict.about.description} locale={locale}>
-  <!-- Page Header / Image Carousel Placeholder -->
+  <!-- Page Header -->
   <section class="relative h-[50vh] min-h-[350px] overflow-hidden">
-    <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-brown">
       <img
-        src="/images/sobre/01.jpeg"
+        src="/images/sobre/04.jpg"
+        alt=""
+        class="absolute inset-0 z-0 w-full h-full object-cover blur-md scale-105 opacity-45"
+        aria-hidden="true"
+      />
+      <img
+        src="/images/sobre/04.jpg"
         alt={dict.about.heroAlt}
-        class="w-full h-full object-cover"
+        class="absolute inset-0 z-10 w-full h-full object-contain object-center"
         loading="eager"
       />
-      <div class="absolute inset-0 bg-brown/50"></div>
+      <div class="absolute inset-0 z-20 bg-brown/45"></div>
     </div>
-    <div class="relative z-10 h-full flex items-center">
+    <div class="relative z-30 h-full flex items-center">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium text-cream">{dict.about.heading}</h1>
       </div>
@@ -45,6 +57,24 @@ const companyCopy = company.en;
             class="w-full rounded-lg shadow-lg"
             loading="lazy"
           />
+        </div>
+      </div>
+
+      <div class="mt-16 lg:mt-20">
+        <SectionHeading align="center">
+          {dict.about.galleryHeading}
+        </SectionHeading>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+          {aboutGalleryImages.map((image) => (
+            <figure class="aspect-[4/3] overflow-hidden rounded-lg bg-cream-dark shadow-sm">
+              <img
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </figure>
+          ))}
         </div>
       </div>
     </div>

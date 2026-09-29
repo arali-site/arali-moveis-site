@@ -78,6 +78,6 @@ export const company = {
   documents: {
     codigoEtica: "https://www.arali.com.br/documents/Codigo-de-Etica.pdf",
     relatorioTransparencia:
-      "https://www.arali.com.br/public/documents/Relatorio-de-Transparencia-e-Igualdade-Salarial-de-Mulheres-e-Homens-2-Semestre-2026.pdf",
+      "https://www.arali.com.br/documents/Relatorio-de-Transparencia-e-Igualdade-Salarial-de-Mulheres-e-Homens-2-Semestre-2026.pdf",
   },
 };

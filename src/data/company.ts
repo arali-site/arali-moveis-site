@@ -76,8 +76,8 @@ export const company = {
   },
 
   documents: {
-    codigoEtica: "https://aralimoveis.com.br/wp-content/uploads/2023/08/Codigo-de-Etica.pdf",
+    codigoEtica: "https://www.arali.com.br/documents/Codigo-de-Etica.pdf",
     relatorioTransparencia:
-      "http://aralimoveis.com/wp-content/uploads/2026/03/Relatorio-de-Transparencia-e-Igualdade-Salarial-de-Mulheres-e-Homens-1o-Semestre-2026.pdf",
+      "https://www.arali.com.br/public/documents/Relatorio-de-Transparencia-e-Igualdade-Salarial-de-Mulheres-e-Homens-2-Semestre-2026.pdf",
   },
 };
